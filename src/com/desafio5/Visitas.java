@@ -5,28 +5,27 @@ import java.util.Random;
 
 public class Visitas {
 	
-	ArrayList<String> a = new ArrayList<String>();
-	Random random = new Random();
+	Random random = new Random(); // Objeto Random para generar números aleatorios
 	
     public ArrayList<Integer> registroVisitas(int n)    {
-    	ArrayList<Integer> visitas = new ArrayList<Integer>();
+    	ArrayList<Integer> visitas = new ArrayList<Integer>(); // ArrayList para guardar las cantidades de visitas
     	
     	for (int i=0; i < n; i ++) {    		
-    		visitas.add(random.nextInt(5000 + 800) + 800);
+    		visitas.add(random.nextInt(5000 + 800) + 800); // Agregamos números aleatorios al ArrayList en un for hasta completar n recibido
     	}
    	
-    	return(visitas);
+    	return(visitas); // Retornamos el ArrayList
     }
     
-	public float promedio (ArrayList<Integer> arr) {
+	public float promedio (ArrayList<Integer> arr) { // recibe un ArrayList, retorna el promedio
 		float promedio = 0;
 		
     	for (int i=0; i < arr.size(); i ++) {
     		System.out.println("visitas dia " + (i+1) + " : " + arr.get(i));
-    		promedio += arr.get(i);
+    		promedio += arr.get(i); // Suma valor del indice actual
     	}
 			
-		return promedio / arr.size();
+		return promedio / arr.size(); // Retorna el promedio (sumatoria / tamaño del ArrayList)
 	}
 	
 }
